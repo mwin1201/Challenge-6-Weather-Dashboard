@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/CSS/style.css"/>
+    
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="parent-container d-flex">
+        <div class="row">
+            <!--search for city col-->
+            <div class="search-city col-12 col-md-3 border border-dark border-3">
+                <h3>Search for a city:</h3>
+            </div>
+            <!--main city weather view-->
+            <div class="main-card col-12 col-md-9 border border-dark border-3">
+                <h3>Atlanta</h3>
+            </div>
+            <!--5-day forecast cards-->
+            <div class="forecast-cards col-12 col-md-9 offset-md-3 border border-dark border-3">
+                <h3>5 day forecast</h3>
+                <div class="row justify-content-around">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">11/12/21</h5>
+                            <p class="card-text" id="date">Temp: <span id="temp"></span></p>
+                            <p class="card-text">Wind: <span id="wind"></span></p>
+                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" id="date">11/12/21</h5>
+                            <p class="card-text">Temp: <span id="temp"></span></p>
+                            <p class="card-text">Wind: <span id="wind"></span></p>
+                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" id="date">11/12/21</h5>
+                            <p class="card-text">Temp: <span id="temp"></span></p>
+                            <p class="card-text">Wind: <span id="wind"></span></p>
+                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" id="date">11/12/21</h5>
+                            <p class="card-text">Temp: <span id="temp"></span></p>
+                            <p class="card-text">Wind: <span id="wind"></span></p>
+                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" id="date">11/12/21</h5>
+                            <p class="card-text">Temp: <span id="temp"></span></p>
+                            <p class="card-text">Wind: <span id="wind"></span></p>
+                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/JS/script.js"></script>
+</body>
+</html>
