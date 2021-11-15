@@ -20,3 +20,15 @@ form {
     background-color: darkblue;
     color: white;
 }
+
+.severe {
+    background-color: red;
+}
+
+.moderate {
+    background-color: orange;
+}
+
+.favorable {
+    background-color: lightgreen;
+}

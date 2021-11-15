@@ -59,7 +59,21 @@ var displayCurrentWeather = function(data,city) {
     $("#current-weather").append('<p>Temperature: ' + data.current.temp + ' °F</p>');
     $("#current-weather").append('<p>Wind: ' + data.current.wind_speed + ' MPH</p>');
     $("#current-weather").append('<p>Humidity: ' + data.current.humidity + '%</p>');
-    $("#current-weather").append('<p>UV Index: ' + data.current.uvi + '</p>');
+    $("#current-weather").append('<p>UV Index: <span class="uv-index">' + data.current.uvi + '</span></p>');
+    uvScale(data.current.uvi);
+};
+
+var uvScale = function(index) {
+    console.log(index);
+    if (index >= 8) {
+        $(".uv-index").addClass("severe");
+    }
+    else if (index >= 3 && index < 8) {
+        $(".uv-index").addClass("moderate");
+    }
+    else {
+        $(".uv-index").addClass("favorable");
+    }
 };
 
 var displaySearchButtons = function(saveSearchArr) {
