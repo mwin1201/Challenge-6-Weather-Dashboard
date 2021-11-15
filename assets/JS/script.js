@@ -43,19 +43,19 @@ var displayWeatherForecast = function(data) {
             '<div class="card">' +
             '<div class="card-body">' + 
             '<h5 class="card-title">'+ date + '</h5>'+
+            '<img class="weather-icon" src="' + "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png" +'"' + ' alt="' + data.daily[i].weather[0].description + '"/>' +
             '<p class="card-text">Temp: ' + data.daily[i].temp.day + '°F</p>' +
             '<p class="card-text">Wind: ' + data.daily[i].wind_speed + ' MPH</p>' +
             '<p class="card-text">Humidity: ' + data.daily[i].humidity + '%</p>'+
             '</div>' +
             '</div>'
         )
-        console.log(moment.unix(data.daily[i].dt).format("MM-DD-YYYY"));
     }
 };
 
 var displayCurrentWeather = function(data,city) {
     $("#current-weather").empty();
-    $("#current-weather").append('<h3 id="current-city">' + city + ' <span id="current-date">' + moment.unix(data.current.dt).format('MM-DD-YYYY') + '</span> <span id="weather-icon">' + data.current.weather.icon + '</span>');
+    $("#current-weather").append('<h3 id="current-city">' + city + ' <span id="current-date">' + moment.unix(data.current.dt).format('MM-DD-YYYY') + '</span> <span id="weather-icon"> <img src="' + "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + ".png" +'"' + ' alt="' + data.current.weather[0].description + '"/></span>');
     $("#current-weather").append('<p>Temperature: ' + data.current.temp + ' °F</p>');
     $("#current-weather").append('<p>Wind: ' + data.current.wind_speed + ' MPH</p>');
     $("#current-weather").append('<p>Humidity: ' + data.current.humidity + '%</p>');
