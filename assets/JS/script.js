@@ -1,8 +1,9 @@
-//var currentWeatherEl = document.querySelector("#current-weather");
+// array to hold searched cities
 var savedCities = [];
 
+// calls into Open Weather API to extract the lon and lat values for the searched city
 var getLonAndLat = function(city) {
-    // getting weather data over 5 days with 3 hour steps
+    // getting weather data over 5 days with 3 hour steps to retrieve the longitude and latitude values
     var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=711a1093e77d9e3d07585442f8d5ee1b";
     fetch(apiUrl)
     .then(function(response) {
@@ -21,7 +22,7 @@ var getLonAndLat = function(city) {
     });
 };
 
-
+// retrieves the current and forecasted weather for a city
 var getWeatherData = function(longitude,latitude,city) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&units=imperial&exclude=minutely,hourly,alerts&appid=711a1093e77d9e3d07585442f8d5ee1b";
     fetch(apiUrl)
@@ -35,6 +36,7 @@ var getWeatherData = function(longitude,latitude,city) {
     });
 };
 
+// creates the 5-day forecast cards on the dashboard
 var displayWeatherForecast = function(data) {
     $("#card-container").empty();
     for (var i = 1; i < 6; i++) {
@@ -53,6 +55,7 @@ var displayWeatherForecast = function(data) {
     }
 };
 
+// displays the current weather values in the dashboard
 var displayCurrentWeather = function(data,city) {
     $("#current-weather").empty();
     $("#current-weather").append('<h3 id="current-city">' + city + ' <span id="current-date">' + moment.unix(data.current.dt).format('MM-DD-YYYY') + '</span> <span id="weather-icon"> <img src="' + "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + ".png" +'"' + ' alt="' + data.current.weather[0].description + '"/></span>');
@@ -63,6 +66,7 @@ var displayCurrentWeather = function(data,city) {
     uvScale(data.current.uvi);
 };
 
+// add classes corresponding to uv-index severity
 var uvScale = function(index) {
     console.log(index);
     if (index >= 8) {
@@ -76,6 +80,7 @@ var uvScale = function(index) {
     }
 };
 
+// display the saved search buttons on the dashboard
 var displaySearchButtons = function(saveSearchArr) {
     $("#btnGroup").html("");
     for (var i = saveSearchArr.length - 1; i >= 0; i--) {
@@ -86,6 +91,7 @@ var displaySearchButtons = function(saveSearchArr) {
     }
 };
 
+// save the cities searched in Local Storage, limit is 5
 var saveSearches = function(city) {
     if (savedCities.length < 5) {
         savedCities.push(city);
@@ -98,6 +104,7 @@ var saveSearches = function(city) {
     displaySearchButtons(savedCities);
 };
 
+// load the search buttons from Local Storage when the dashboard opens up
 var loadSearchButtons = function() {
     if (localStorage.getItem("Searches")) {
         savedCities = JSON.parse(localStorage.getItem("Searches"));
@@ -105,6 +112,7 @@ var loadSearchButtons = function() {
     displaySearchButtons(savedCities);
 };
 
+// trigger search from 'search' button
 $("#searchBtn").click(function(event) {
     event.preventDefault();
     var city = $("#search-city").val();
@@ -113,10 +121,12 @@ $("#searchBtn").click(function(event) {
     getLonAndLat(city);
 });
 
+// trigger search from saved city buttons
 $("#btnGroup").click(function(event) {
     var city = event.target.innerText;
     saveSearches(city);
     getLonAndLat(city);
 });
 
+// initiate the load of saved buttons right away
 loadSearchButtons();
