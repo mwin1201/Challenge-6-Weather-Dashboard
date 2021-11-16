@@ -116,6 +116,7 @@ var loadSearchButtons = function() {
 $("#searchBtn").click(function(event) {
     event.preventDefault();
     var city = $("#search-city").val();
+    $("#search-city").val("");
     console.log(city);
     saveSearches(city);
     getLonAndLat(city);
