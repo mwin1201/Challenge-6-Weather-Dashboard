@@ -12,9 +12,9 @@ header h1 {
     color: white;
 }
 
-form {
-    border-bottom: 3px solid black;
+.search-section {
     text-align: center;
+    margin-left: 10px;
 }
 
 .form-group label {
@@ -24,6 +24,10 @@ form {
 
 form button {
     margin-bottom: 10px;
+}
+
+#btnGroup {
+    border-top: 3px solid black;
 }
 
 #current-city {

@@ -5,14 +5,14 @@ This weather dashboard allows users to search for cities around the world and in
 
 ## Screenshots
 Title
-![weather-dashboard title](https://user-images.githubusercontent.com/90287696/142292424-6d10b650-fc88-411f-bcae-e8343cde17b6.png)
+![Title Weather Dashboard](https://user-images.githubusercontent.com/90287696/142295099-6f2783a5-1144-45e3-b4ad-5ef520468055.png)
 
 Forecast
 ![5-day forecast](https://user-images.githubusercontent.com/90287696/142292474-90e9773e-ef03-40f2-a30e-fbf96a554e51.png)
 
 Search
 
-![search area](https://user-images.githubusercontent.com/90287696/142292429-76cb6d35-31f6-410c-8a8a-7dc58294307d.png)
+![search buttons](https://user-images.githubusercontent.com/90287696/142295105-1e0a1b76-8a2f-4278-8891-30cfc73e4138.png)
 
 
 ## Website
