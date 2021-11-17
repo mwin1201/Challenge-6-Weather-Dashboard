@@ -14,11 +14,16 @@ header h1 {
 
 form {
     border-bottom: 3px solid black;
+    text-align: center;
 }
 
 .form-group label {
     font-size: 24px;
     font-weight: bold;
+}
+
+form button {
+    margin-bottom: 10px;
 }
 
 #current-city {
