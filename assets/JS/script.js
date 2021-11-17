@@ -58,7 +58,7 @@ var displayWeatherForecast = function(data) {
 // displays the current weather values in the dashboard
 var displayCurrentWeather = function(data,city) {
     $("#current-weather").empty();
-    $("#current-weather").append('<h3 id="current-city">' + city + ' <span id="current-date">' + moment.unix(data.current.dt).format('MM-DD-YYYY') + '</span> <span id="weather-icon"> <img src="' + "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + ".png" +'"' + ' alt="' + data.current.weather[0].description + '"/></span>');
+    $("#current-weather").append('<h3 id="current-city">' + city + ' <span id="current-date">' + moment.unix(data.current.dt).format('MM-DD-YYYY') + '</span> <span class="weather-icon"> <img src="' + "http://openweathermap.org/img/wn/" + data.current.weather[0].icon + ".png" +'"' + ' alt="' + data.current.weather[0].description + '"/></span>');
     $("#current-weather").append('<p>Temperature: ' + data.current.temp + ' °F</p>');
     $("#current-weather").append('<p>Wind: ' + data.current.wind_speed + ' MPH</p>');
     $("#current-weather").append('<p>Humidity: ' + data.current.humidity + '%</p>');

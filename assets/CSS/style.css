@@ -27,8 +27,8 @@ form {
     margin-left: 10px;;
 }
 
-#weather-icon {
-    background-color: darkblue;
+.weather-icon {
+    background-color: lightblue;
     padding: 3px;
     border-radius: 10px;
 }
