@@ -11,6 +11,7 @@ Forecast
 ![5-day forecast](https://user-images.githubusercontent.com/90287696/142292474-90e9773e-ef03-40f2-a30e-fbf96a554e51.png)
 
 Search
+
 ![search area](https://user-images.githubusercontent.com/90287696/142292429-76cb6d35-31f6-410c-8a8a-7dc58294307d.png)
 
 
