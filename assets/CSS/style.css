@@ -1,5 +1,5 @@
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -16,6 +16,38 @@ form {
     border-bottom: 3px solid black;
 }
 
+.form-group label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#current-city {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;;
+}
+
+#weather-icon {
+    background-color: darkblue;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.main-card {
+    background-color: papayawhip;
+}
+
+.main-card p {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-left: 10px;
+}
+
+.forecast-cards h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .card-body {
     background-color: darkblue;
     color: white;
@@ -23,12 +55,22 @@ form {
 
 .severe {
     background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
 }
 
 .moderate {
     background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
 }
 
 .favorable {
-    background-color: lightgreen;
+    background-color: forestgreen;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
 }

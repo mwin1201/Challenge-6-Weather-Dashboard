@@ -17,63 +17,65 @@
     <div class="parent-container d-flex">
         <div class="row">
             <!--search for city col-->
-            <div class="search-city col-12 col-md-3 border border-dark border-3">
+            <div class="search-city col-12 col-md-3">
                 <form>
                     <div class="form-group">
                         <label for="search-city">Search for a city:</label>
                         <input type="text" id="search-city" placeholder="Minneapolis"/>
+                    </div>
                         <button type="submit" class="btn btn-info" id="searchBtn">Search</button>
-                    </div>
                 </form>
-                <div class="btn-group-vertical btn-block" id="btnGroup">
+                <div class="btn-group-vertical btn-block" id="btnGroup"></div>
+            </div>
+            <!--container for both main city weather and forecast-->
+            <div class="col-12 col-md-9">
+                <!--main city weather view-->
+                <div class="main-card border border-dark border-3" id="current-weather">
+                    <h3 id="current-city">City info will appear here!</h3>
                 </div>
-            </div>
-            <!--main city weather view-->
-            <div class="main-card col-12 col-md-9 border border-dark border-3" id="current-weather">
-                <h3 id="current-city">Search for a city!</h3>
-            </div>
-            <!--5-day forecast cards-->
-            <div class="forecast-cards col-12 col-md-9 offset-md-3 border border-dark border-3">
-                <h3>5-Day Forecast:</h3>
-                <div class="row justify-content-around" id="card-container">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">11/12/21</h5>
-                            <p class="card-text" id="date">Temp: <span id="temp"></span></p>
-                            <p class="card-text">Wind: <span id="wind"></span></p>
-                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                <!--5-day forecast cards-->
+                <div class="forecast-cards">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row justify-content-around" id="card-container">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">11/12/21</h5>
+                                <p class="card-text" id="date">Temp: <span id="temp"></span></p>
+                                <p class="card-text">Wind: <span id="wind"></span></p>
+                                <p class="card-text">Humidity: <span id="humidity"></span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" id="date">11/12/21</h5>
-                            <p class="card-text">Temp: <span id="temp"></span></p>
-                            <p class="card-text">Wind: <span id="wind"></span></p>
-                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="date">11/12/21</h5>
+                                <p class="card-text">Temp: <span id="temp"></span></p>
+                                <p class="card-text">Wind: <span id="wind"></span></p>
+                                <p class="card-text">Humidity: <span id="humidity"></span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" id="date">11/12/21</h5>
-                            <p class="card-text">Temp: <span id="temp"></span></p>
-                            <p class="card-text">Wind: <span id="wind"></span></p>
-                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="date">11/12/21</h5>
+                                <p class="card-text">Temp: <span id="temp"></span></p>
+                                <p class="card-text">Wind: <span id="wind"></span></p>
+                                <p class="card-text">Humidity: <span id="humidity"></span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" id="date">11/12/21</h5>
-                            <p class="card-text">Temp: <span id="temp"></span></p>
-                            <p class="card-text">Wind: <span id="wind"></span></p>
-                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="date">11/12/21</h5>
+                                <p class="card-text">Temp: <span id="temp"></span></p>
+                                <p class="card-text">Wind: <span id="wind"></span></p>
+                                <p class="card-text">Humidity: <span id="humidity"></span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" id="date">11/12/21</h5>
-                            <p class="card-text">Temp: <span id="temp"></span></p>
-                            <p class="card-text">Wind: <span id="wind"></span></p>
-                            <p class="card-text">Humidity: <span id="humidity"></span></p>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="date">11/12/21</h5>
+                                <p class="card-text">Temp: <span id="temp"></span></p>
+                                <p class="card-text">Wind: <span id="wind"></span></p>
+                                <p class="card-text">Humidity: <span id="humidity"></span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
