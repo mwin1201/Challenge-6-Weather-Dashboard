@@ -1,7 +1,7 @@
 # Challenge-6-Weather-Dashboard
 
 ## Description
-This weather dashboard allows users to search for cities around the world and instantly see the current weather as well as a 5-day forecast. Helpful weather icons display weather conditions for each day alongside temperature, wind speed, humidity, and uv-index information. Each city searched is saved as a button below the search box for quicker search ability. These values are saved in LocalStorage and loaded upon loading the dashboard. A maximum of 5 saved searches is allowed.
+This weather dashboard allows users to search for cities around the world and instantly see the current weather as well as a 5-day forecast. Helpful weather icons display weather conditions for each day alongside temperature, wind speed, humidity, and uv-index information. Each city searched is saved as a button below the search box for quicker search ability. These values are saved in LocalStorage and loaded upon opening the dashboard. A maximum of 5 saved searches is allowed.
 
 ## Screenshots
 Title
